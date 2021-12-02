@@ -4,6 +4,9 @@ FROM node:13
 # Create app directory
 WORKDIR /usr/src/app
 
+ARG NAME
+ENV NAME=$NAME
+
 # Install app dependencies by copying
 # package.json and package-lock.json
 COPY package*.json ./
